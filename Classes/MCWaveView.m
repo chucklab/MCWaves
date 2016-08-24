@@ -7,6 +7,8 @@
 //
 
 #import "MCWaveView.h"
+#import "MCConstants.h"
+#import "Masonry.h"
 
 @interface MCWaveView ()
 
@@ -16,6 +18,9 @@
 @property (nonatomic, assign) BOOL waving;
 @property (nonatomic, assign) CGFloat offsetX;
 @property (nonatomic, assign) CGFloat offsetY;
+
+@property (nonatomic, strong) NSArray *status;
+@property (nonatomic, strong) UILabel *statusLabel;
 
 @end
 
@@ -32,6 +37,8 @@
     self.waveSpeed = 12;
     self.waveColor = [UIColor whiteColor];
     self.waveTime = 0;
+    
+    self.status = @[];
     
     return self;
 }
@@ -59,6 +66,34 @@
     return _waveShapeLayer;
 }
 
+- (UILabel *)statusLabel {
+    if (_statusLabel) {
+        return _statusLabel;
+    }
+    
+    UILabel *statusLabel = [[UILabel alloc] init];
+    _statusLabel = statusLabel;
+    [self addSubview:statusLabel];
+    statusLabel.backgroundColor = [UIColor clearColor];
+    statusLabel.textColor = [UIColor lightGrayColor];
+    statusLabel.font = font(12);
+    statusLabel.adjustsFontSizeToFitWidth = YES;
+    statusLabel.textAlignment = NSTextAlignmentCenter;
+    statusLabel.numberOfLines = 0;
+    [self.statusLabel mas_makeConstraints:^(MASConstraintMaker *make){
+        make.edges.equalTo(self);
+    }];
+    
+    return _statusLabel;
+}
+
+#pragma mark - Layout
+- (void)layoutSubviews {
+    [self.statusLabel mas_remakeConstraints:^(MASConstraintMaker *make){
+        make.edges.equalTo(self);
+    }];
+}
+
 #pragma mark - Wave life cycle.
 - (BOOL)startWave {
     if (self.waving) {
@@ -81,8 +116,6 @@
 }
 
 - (void)updateWave {
-    //NSLog(@"duration:%@", @(self.waveDisplayLink.duration));
-    NSLog(@"fps:%@", @(1 / self.waveDisplayLink.duration));
     
     self.offsetX -= self.waveSpeed;
     CGFloat width = CGRectGetWidth(self.frame);
@@ -111,6 +144,26 @@
     
     self.waveShapeLayer.path = path;
     CGPathRelease(path);
+    
+    
+    if (self.printStatus) {
+        [self updateStatus];
+    }
+    
+}
+
+- (void)updateStatus {
+    self.status = @[
+                    [NSString stringWithFormat:@"timestamp:%.2f", self.waveDisplayLink.timestamp],
+                    [NSString stringWithFormat:@"duration:%.4f", self.waveDisplayLink.duration],
+                    [NSString stringWithFormat:@"fps:%.2f", 1 / self.waveDisplayLink.duration],
+                    ];
+    NSString *statusLabelText = @"";
+    for (NSString *str in self.status) {
+        statusLabelText = [statusLabelText stringByAppendingString:str];
+        statusLabelText = [statusLabelText stringByAppendingString:@" "];
+    }
+    self.statusLabel.text = statusLabelText;
 }
 
 - (void)pause {

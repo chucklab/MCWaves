@@ -16,6 +16,8 @@
 @property (nonatomic, assign) CGFloat angularSpeed;
 @property (nonatomic, assign) CGFloat waveSpeed;
 
+@property (nonatomic, assign) BOOL printStatus;
+
 #pragma mark - Wave life cycle.
 - (BOOL)startWave;
 - (void)pause;

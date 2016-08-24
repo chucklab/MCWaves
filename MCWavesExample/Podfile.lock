@@ -1,0 +1,15 @@
+PODS:
+  - Masonry (1.0.1)
+  - MCConstants (0.0.2)
+
+DEPENDENCIES:
+  - Masonry (~> 1.0)
+  - MCConstants (~> 0.0.2)
+
+SPEC CHECKSUMS:
+  Masonry: a1a931a0d08870ed8ae415a2ea5ea68ebcac77df
+  MCConstants: 45b4235513cc8e55982ff7fa99e34d8aaea68180
+
+PODFILE CHECKSUM: 0686c74b02ae5784e3520589e69827ca051fc9f1
+
+COCOAPODS: 1.0.1

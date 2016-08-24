@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C0ADF8C1D6D418C005A0669 /* WaveTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C0ADF881D6D418C005A0669 /* WaveTableViewCell.m */; };
+		4C0ADF8D1D6D418C005A0669 /* WavesTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C0ADF8A1D6D418C005A0669 /* WavesTableView.m */; };
+		4C0ADF901D6D4312005A0669 /* NormalWaveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C0ADF8F1D6D4312005A0669 /* NormalWaveViewController.m */; };
 		4C353B621D6C309500B9A29E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C353B611D6C309500B9A29E /* main.m */; };
 		4C353B651D6C309500B9A29E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C353B641D6C309500B9A29E /* AppDelegate.m */; };
 		4C353B681D6C309500B9A29E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C353B671D6C309500B9A29E /* ViewController.m */; };
@@ -14,9 +17,16 @@
 		4C353B6D1D6C309500B9A29E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C353B6C1D6C309500B9A29E /* Assets.xcassets */; };
 		4C353B701D6C309500B9A29E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C353B6E1D6C309500B9A29E /* LaunchScreen.storyboard */; };
 		4CCFDDB41D6C30F3006AC2A3 /* MCWaveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCFDDB31D6C30F3006AC2A3 /* MCWaveView.m */; };
+		8395BE4E41CF14DE37BF9EDD /* libPods-MCWavesExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D1AEED6AE4F8AC24F9C2269 /* libPods-MCWavesExample.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4C0ADF881D6D418C005A0669 /* WaveTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaveTableViewCell.m; sourceTree = "<group>"; };
+		4C0ADF891D6D418C005A0669 /* WaveTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaveTableViewCell.h; sourceTree = "<group>"; };
+		4C0ADF8A1D6D418C005A0669 /* WavesTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WavesTableView.m; sourceTree = "<group>"; };
+		4C0ADF8B1D6D418C005A0669 /* WavesTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WavesTableView.h; sourceTree = "<group>"; };
+		4C0ADF8E1D6D4312005A0669 /* NormalWaveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NormalWaveViewController.h; sourceTree = "<group>"; };
+		4C0ADF8F1D6D4312005A0669 /* NormalWaveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NormalWaveViewController.m; sourceTree = "<group>"; };
 		4C353B5D1D6C309500B9A29E /* MCWavesExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MCWavesExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C353B611D6C309500B9A29E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4C353B631D6C309500B9A29E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -29,6 +39,9 @@
 		4C353B711D6C309500B9A29E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4CCFDDB21D6C30F3006AC2A3 /* MCWaveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCWaveView.h; sourceTree = "<group>"; };
 		4CCFDDB31D6C30F3006AC2A3 /* MCWaveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCWaveView.m; sourceTree = "<group>"; };
+		5B9333C3B07CCB41A014D392 /* Pods-MCWavesExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MCWavesExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MCWavesExample/Pods-MCWavesExample.debug.xcconfig"; sourceTree = "<group>"; };
+		5D1AEED6AE4F8AC24F9C2269 /* libPods-MCWavesExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MCWavesExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFFFD1CE26310EA3E461CE9A /* Pods-MCWavesExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MCWavesExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-MCWavesExample/Pods-MCWavesExample.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,18 +49,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8395BE4E41CF14DE37BF9EDD /* libPods-MCWavesExample.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B843F2B272A02C9AB4EBCAB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5B9333C3B07CCB41A014D392 /* Pods-MCWavesExample.debug.xcconfig */,
+				AFFFD1CE26310EA3E461CE9A /* Pods-MCWavesExample.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		4C353B541D6C309500B9A29E = {
 			isa = PBXGroup;
 			children = (
 				4CCFDDB11D6C30F3006AC2A3 /* Classes */,
 				4C353B5F1D6C309500B9A29E /* MCWavesExample */,
 				4C353B5E1D6C309500B9A29E /* Products */,
+				3B843F2B272A02C9AB4EBCAB /* Pods */,
+				C44D515C22986F72F9FDB8EE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -66,6 +91,12 @@
 				4C353B641D6C309500B9A29E /* AppDelegate.m */,
 				4C353B661D6C309500B9A29E /* ViewController.h */,
 				4C353B671D6C309500B9A29E /* ViewController.m */,
+				4C0ADF8B1D6D418C005A0669 /* WavesTableView.h */,
+				4C0ADF8A1D6D418C005A0669 /* WavesTableView.m */,
+				4C0ADF891D6D418C005A0669 /* WaveTableViewCell.h */,
+				4C0ADF881D6D418C005A0669 /* WaveTableViewCell.m */,
+				4C0ADF8E1D6D4312005A0669 /* NormalWaveViewController.h */,
+				4C0ADF8F1D6D4312005A0669 /* NormalWaveViewController.m */,
 				4C353B691D6C309500B9A29E /* Main.storyboard */,
 				4C353B6C1D6C309500B9A29E /* Assets.xcassets */,
 				4C353B6E1D6C309500B9A29E /* LaunchScreen.storyboard */,
@@ -93,6 +124,14 @@
 			path = ../Classes;
 			sourceTree = "<group>";
 		};
+		C44D515C22986F72F9FDB8EE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5D1AEED6AE4F8AC24F9C2269 /* libPods-MCWavesExample.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -100,9 +139,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4C353B741D6C309500B9A29E /* Build configuration list for PBXNativeTarget "MCWavesExample" */;
 			buildPhases = (
+				2FABB88DBE8061AF0688B8D8 /* [CP] Check Pods Manifest.lock */,
 				4C353B591D6C309500B9A29E /* Sources */,
 				4C353B5A1D6C309500B9A29E /* Frameworks */,
 				4C353B5B1D6C309500B9A29E /* Resources */,
+				7653955A4C3EB626B8A5ADD1 /* [CP] Embed Pods Frameworks */,
+				FF869CBE374AF07CF79B9BFC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -119,6 +161,7 @@
 		4C353B551D6C309500B9A29E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = MC;
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "iMegatron's Lab";
 				TargetAttributes = {
@@ -158,12 +201,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2FABB88DBE8061AF0688B8D8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7653955A4C3EB626B8A5ADD1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MCWavesExample/Pods-MCWavesExample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FF869CBE374AF07CF79B9BFC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MCWavesExample/Pods-MCWavesExample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4C353B591D6C309500B9A29E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				4C353B681D6C309500B9A29E /* ViewController.m in Sources */,
+				4C0ADF8C1D6D418C005A0669 /* WaveTableViewCell.m in Sources */,
+				4C0ADF8D1D6D418C005A0669 /* WavesTableView.m in Sources */,
+				4C0ADF901D6D4312005A0669 /* NormalWaveViewController.m in Sources */,
 				4CCFDDB41D6C30F3006AC2A3 /* MCWaveView.m in Sources */,
 				4C353B651D6C309500B9A29E /* AppDelegate.m in Sources */,
 				4C353B621D6C309500B9A29E /* main.m in Sources */,
@@ -276,6 +370,7 @@
 		};
 		4C353B751D6C309500B9A29E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B9333C3B07CCB41A014D392 /* Pods-MCWavesExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MCWavesExample/Info.plist;
@@ -287,6 +382,7 @@
 		};
 		4C353B761D6C309500B9A29E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AFFFD1CE26310EA3E461CE9A /* Pods-MCWavesExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MCWavesExample/Info.plist;
