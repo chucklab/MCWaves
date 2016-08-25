@@ -7,6 +7,7 @@ A collection of wave graphics, have fun.
 
 ![Sinusoide](media/Sinusoide.gif)
 
+Some ease curve:
 ![Sinusoide](media/easing.png)
 
 
