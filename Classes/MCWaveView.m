@@ -1,6 +1,6 @@
 //
 //  MCWaveView.m
-//  MCWaveExample
+//  MCWave
 //
 //  Created by Chao Ma on 08/23/2016.
 //  Copyright © 2016 iMegatron's Lab. All rights reserved.
@@ -15,9 +15,8 @@
 @property (nonatomic, strong) CADisplayLink *waveDisplayLink;
 @property (nonatomic, strong) CAShapeLayer *waveShapeLayer;
 
-@property (nonatomic, assign) BOOL waving;
-@property (nonatomic, assign) CGFloat offsetX;
-@property (nonatomic, assign) CGFloat offsetY;
+@property (nonatomic) BOOL waving;
+@property (nonatomic, strong) MCSinusoid *sinusoid;
 
 @property (nonatomic, strong) NSArray *status;
 @property (nonatomic, strong) UILabel *statusLabel;
@@ -33,12 +32,11 @@
         return nil;
     }
     
-    self.angularSpeed = 1.5;
-    self.waveSpeed = 12;
     self.waveColor = [UIColor whiteColor];
     self.waveTime = 0;
     
     self.status = @[];
+    self.sinusoid = [[MCSinusoid alloc] init];
     
     return self;
 }
@@ -102,9 +100,12 @@
     
     self.waving = YES;
     
-    [self updateWave];
     self.waveDisplayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(updateWave)];
     [self.waveDisplayLink addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSRunLoopCommonModes];
+    
+    self.sinusoid.sinusoidType = self.sinusoidType;
+    self.sinusoid.A = 20;
+    [self.sinusoid reset];
     
     if (self.waveTime > 0.0) {
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(self.waveTime * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
@@ -117,7 +118,6 @@
 
 - (void)updateWave {
     
-    self.offsetX -= self.waveSpeed;
     CGFloat width = CGRectGetWidth(self.frame);
     CGFloat height = CGRectGetHeight(self.frame);
     
@@ -126,10 +126,12 @@
     // Move to start point
     CGPathMoveToPoint(path, nil, 0, height / 2);
     
-    // Sinusoid
+    // Sinusoid: y=Asin(ωx+φ)+k
     CGFloat y = 0.0;
+    self.sinusoid.currTimestamp = self.waveDisplayLink.timestamp;
     for (CGFloat x = 0.0; x < width + 0.000001; x++) {
-        y = height * sin(.01 * (self.angularSpeed * x + self.offsetX));
+        self.sinusoid.x = x;
+        y = self.sinusoid.y;
         CGPathAddLineToPoint(path, nil, x, y);
     }
     

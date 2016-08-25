@@ -7,20 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4C0ADF901D6D4312005A0669 /* NormalWaveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C0ADF8F1D6D4312005A0669 /* NormalWaveViewController.m */; };
+		4C0ADF901D6D4312005A0669 /* WaveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C0ADF8F1D6D4312005A0669 /* WaveViewController.m */; };
 		4C353B621D6C309500B9A29E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C353B611D6C309500B9A29E /* main.m */; };
 		4C353B651D6C309500B9A29E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C353B641D6C309500B9A29E /* AppDelegate.m */; };
 		4C353B681D6C309500B9A29E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C353B671D6C309500B9A29E /* ViewController.m */; };
 		4C353B6B1D6C309500B9A29E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C353B691D6C309500B9A29E /* Main.storyboard */; };
 		4C353B6D1D6C309500B9A29E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C353B6C1D6C309500B9A29E /* Assets.xcassets */; };
 		4C353B701D6C309500B9A29E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C353B6E1D6C309500B9A29E /* LaunchScreen.storyboard */; };
+		4C8C6CDD1D6EC8110002E089 /* MCSinusoid.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8C6CDC1D6EC8110002E089 /* MCSinusoid.m */; };
 		4CCFDDB41D6C30F3006AC2A3 /* MCWaveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCFDDB31D6C30F3006AC2A3 /* MCWaveView.m */; };
 		8395BE4E41CF14DE37BF9EDD /* libPods-MCWavesExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D1AEED6AE4F8AC24F9C2269 /* libPods-MCWavesExample.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4C0ADF8E1D6D4312005A0669 /* NormalWaveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NormalWaveViewController.h; sourceTree = "<group>"; };
-		4C0ADF8F1D6D4312005A0669 /* NormalWaveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NormalWaveViewController.m; sourceTree = "<group>"; };
+		4C0ADF8E1D6D4312005A0669 /* WaveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaveViewController.h; sourceTree = "<group>"; };
+		4C0ADF8F1D6D4312005A0669 /* WaveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaveViewController.m; sourceTree = "<group>"; };
 		4C353B5D1D6C309500B9A29E /* MCWavesExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MCWavesExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C353B611D6C309500B9A29E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4C353B631D6C309500B9A29E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -31,6 +32,8 @@
 		4C353B6C1D6C309500B9A29E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4C353B6F1D6C309500B9A29E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4C353B711D6C309500B9A29E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C8C6CDB1D6EC8110002E089 /* MCSinusoid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCSinusoid.h; sourceTree = "<group>"; };
+		4C8C6CDC1D6EC8110002E089 /* MCSinusoid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCSinusoid.m; sourceTree = "<group>"; };
 		4CCFDDB21D6C30F3006AC2A3 /* MCWaveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCWaveView.h; sourceTree = "<group>"; };
 		4CCFDDB31D6C30F3006AC2A3 /* MCWaveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCWaveView.m; sourceTree = "<group>"; };
 		5B9333C3B07CCB41A014D392 /* Pods-MCWavesExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MCWavesExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MCWavesExample/Pods-MCWavesExample.debug.xcconfig"; sourceTree = "<group>"; };
@@ -85,8 +88,8 @@
 				4C353B641D6C309500B9A29E /* AppDelegate.m */,
 				4C353B661D6C309500B9A29E /* ViewController.h */,
 				4C353B671D6C309500B9A29E /* ViewController.m */,
-				4C0ADF8E1D6D4312005A0669 /* NormalWaveViewController.h */,
-				4C0ADF8F1D6D4312005A0669 /* NormalWaveViewController.m */,
+				4C0ADF8E1D6D4312005A0669 /* WaveViewController.h */,
+				4C0ADF8F1D6D4312005A0669 /* WaveViewController.m */,
 				4C353B691D6C309500B9A29E /* Main.storyboard */,
 				4C353B6C1D6C309500B9A29E /* Assets.xcassets */,
 				4C353B6E1D6C309500B9A29E /* LaunchScreen.storyboard */,
@@ -109,6 +112,8 @@
 			children = (
 				4CCFDDB21D6C30F3006AC2A3 /* MCWaveView.h */,
 				4CCFDDB31D6C30F3006AC2A3 /* MCWaveView.m */,
+				4C8C6CDB1D6EC8110002E089 /* MCSinusoid.h */,
+				4C8C6CDC1D6EC8110002E089 /* MCSinusoid.m */,
 			);
 			name = Classes;
 			path = ../Classes;
@@ -245,7 +250,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C353B681D6C309500B9A29E /* ViewController.m in Sources */,
-				4C0ADF901D6D4312005A0669 /* NormalWaveViewController.m in Sources */,
+				4C8C6CDD1D6EC8110002E089 /* MCSinusoid.m in Sources */,
+				4C0ADF901D6D4312005A0669 /* WaveViewController.m in Sources */,
 				4CCFDDB41D6C30F3006AC2A3 /* MCWaveView.m in Sources */,
 				4C353B651D6C309500B9A29E /* AppDelegate.m in Sources */,
 				4C353B621D6C309500B9A29E /* main.m in Sources */,

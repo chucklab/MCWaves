@@ -1,5 +1,5 @@
 //
-//  NormalWaveViewController.h
+//  WaveViewController.h
 //  MCWavesExample
 //
 //  Created by Chao Ma on 08/24/2016.
@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MCSinusoid.h"
 
-@interface NormalWaveViewController : UIViewController
+@interface WaveViewController : UIViewController
+
+@property (nonatomic) MCSinusoidType sinusoidType;
 
 @end

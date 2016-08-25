@@ -9,8 +9,8 @@
 #import "ViewController.h"
 #import "MCConstants.h"
 #import "MCCommonTableView.h"
-#import "NormalWaveViewController.h"
-
+#import "WaveViewController.h"
+#import "MCSinusoid.h"
 
 @interface ViewController ()
 
@@ -30,12 +30,21 @@
     [self.view addSubview:tableView];
     tableView.dataMap = @{
                           @"Day One" : @{
-                                  @"1. Normal" : ^(){
-                                      NormalWaveViewController *vc = [[NormalWaveViewController alloc] init];
+                                  @"1. None" : ^(){
+                                      WaveViewController *vc = [[WaveViewController alloc] init];
+                                      vc.sinusoidType = MCSinusoidTypeNone;
                                       [self.navigationController pushViewController:vc animated:YES];
                                   },
-                                  @"2. Multi lines" : ^(){ NSLog(@"Multi, tapped."); },
-                                  @"3. Long single line" : ^(){ NSLog(@"Long, tapped."); },
+                                  @"2. Normal" : ^(){
+                                      WaveViewController *vc = [[WaveViewController alloc] init];
+                                      vc.sinusoidType = MCSinusoidTypeNormal;
+                                      [self.navigationController pushViewController:vc animated:YES];
+                                  },
+                                  @"3. Decay" : ^(){
+                                      WaveViewController *vc = [[WaveViewController alloc] init];
+                                      vc.sinusoidType = MCSinusoidTypeDecay;
+                                      [self.navigationController pushViewController:vc animated:YES];
+                                  },
                                   @"4. Very long text" : ^(){ NSLog(@"Very, tapped."); },
                                   @"5. No message" : ^(){ NSLog(@"No, tapped."); }
                                   },

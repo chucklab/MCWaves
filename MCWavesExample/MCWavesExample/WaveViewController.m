@@ -1,23 +1,23 @@
 //
-//  NormalWaveViewController.m
+//  WaveViewController.m
 //  MCWavesExample
 //
 //  Created by Chao Ma on 08/24/2016.
 //  Copyright © 2016 iMegatron's Lab. All rights reserved.
 //
 
-#import "NormalWaveViewController.h"
+#import "WaveViewController.h"
 #import "MCConstants.h"
 #import "MCWaveView.h"
 #import <Masonry.h>
 
-@interface NormalWaveViewController ()
+@interface WaveViewController ()
 
 @property (nonatomic, strong) MCWaveView *waveView;
 
 @end
 
-@implementation NormalWaveViewController
+@implementation WaveViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -36,6 +36,7 @@
     self.waveView = waveView;
     [self.view addSubview:waveView];
     waveView.printStatus = YES;
+    waveView.sinusoidType = self.sinusoidType;
     [waveView startWave];
     
     // Tap gesture
@@ -61,6 +62,10 @@
 #pragma mark - Actions
 - (void)backgroundTapped {
     [self.waveView pause];
+}
+
+- (void)dealloc {
+    [self.waveView stopWave];
 }
 
 @end
