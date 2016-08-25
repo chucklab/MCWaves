@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4C0ADF8C1D6D418C005A0669 /* WaveTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C0ADF881D6D418C005A0669 /* WaveTableViewCell.m */; };
-		4C0ADF8D1D6D418C005A0669 /* WavesTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C0ADF8A1D6D418C005A0669 /* WavesTableView.m */; };
 		4C0ADF901D6D4312005A0669 /* NormalWaveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C0ADF8F1D6D4312005A0669 /* NormalWaveViewController.m */; };
 		4C353B621D6C309500B9A29E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C353B611D6C309500B9A29E /* main.m */; };
 		4C353B651D6C309500B9A29E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C353B641D6C309500B9A29E /* AppDelegate.m */; };
@@ -21,10 +19,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4C0ADF881D6D418C005A0669 /* WaveTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaveTableViewCell.m; sourceTree = "<group>"; };
-		4C0ADF891D6D418C005A0669 /* WaveTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaveTableViewCell.h; sourceTree = "<group>"; };
-		4C0ADF8A1D6D418C005A0669 /* WavesTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WavesTableView.m; sourceTree = "<group>"; };
-		4C0ADF8B1D6D418C005A0669 /* WavesTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WavesTableView.h; sourceTree = "<group>"; };
 		4C0ADF8E1D6D4312005A0669 /* NormalWaveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NormalWaveViewController.h; sourceTree = "<group>"; };
 		4C0ADF8F1D6D4312005A0669 /* NormalWaveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NormalWaveViewController.m; sourceTree = "<group>"; };
 		4C353B5D1D6C309500B9A29E /* MCWavesExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MCWavesExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -91,10 +85,6 @@
 				4C353B641D6C309500B9A29E /* AppDelegate.m */,
 				4C353B661D6C309500B9A29E /* ViewController.h */,
 				4C353B671D6C309500B9A29E /* ViewController.m */,
-				4C0ADF8B1D6D418C005A0669 /* WavesTableView.h */,
-				4C0ADF8A1D6D418C005A0669 /* WavesTableView.m */,
-				4C0ADF891D6D418C005A0669 /* WaveTableViewCell.h */,
-				4C0ADF881D6D418C005A0669 /* WaveTableViewCell.m */,
 				4C0ADF8E1D6D4312005A0669 /* NormalWaveViewController.h */,
 				4C0ADF8F1D6D4312005A0669 /* NormalWaveViewController.m */,
 				4C353B691D6C309500B9A29E /* Main.storyboard */,
@@ -255,8 +245,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C353B681D6C309500B9A29E /* ViewController.m in Sources */,
-				4C0ADF8C1D6D418C005A0669 /* WaveTableViewCell.m in Sources */,
-				4C0ADF8D1D6D418C005A0669 /* WavesTableView.m in Sources */,
 				4C0ADF901D6D4312005A0669 /* NormalWaveViewController.m in Sources */,
 				4CCFDDB41D6C30F3006AC2A3 /* MCWaveView.m in Sources */,
 				4C353B651D6C309500B9A29E /* AppDelegate.m in Sources */,

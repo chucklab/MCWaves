@@ -7,14 +7,12 @@
 //
 
 #import "ViewController.h"
-#import "WavesTableView.h"
 #import "MCConstants.h"
+#import "MCCommonTableView.h"
 #import "NormalWaveViewController.h"
 
 
 @interface ViewController ()
-
-@property (nonatomic, strong) UITableView *tableView;
 
 @end
 
@@ -27,43 +25,28 @@
     self.view.backgroundColor = [UIColor whiteColor];
     self.title = @"MCWaves";
     
-    WavesTableView *tableView = [[WavesTableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
-    self.tableView = tableView;
+    // Example
+    MCCommonTableView *tableView = [MCCommonTableView tableViewWithFrame:self.view.bounds];
     [self.view addSubview:tableView];
-    tableView.backgroundColor = [UIColor whiteColor];
-    tableView.cellTappedBlock = ^(NSIndexPath *indexPath, NSString *cellData){
-        switch (indexPath.row) {
-            case 0: { // Normal
-                NormalWaveViewController *vc = [[NormalWaveViewController alloc] init];
-                [self.navigationController pushViewController:vc animated:YES];
-            } break;
-                
-            case 1: { // Multi lines
-            } break;
-                
-            case 2: { // Long single line
-            } break;
-                
-            case 3: { // Very long text
-            } break;
-                
-            case 4: { // No message
-            } break;
-                
-            default: {
-                NormalWaveViewController *vc = [[NormalWaveViewController alloc] init];
-                [self.navigationController pushViewController:vc animated:YES];
-            } break;
-        }
-    };
-    tableView.dataArray = @[
-                            @"Normal",
-                            @"Multi lines",
-                            @"Long single line",
-                            @"Very long text",
-                            @"No message",
-                            ];
-
+    tableView.dataMap = @{
+                          @"Day One" : @{
+                                  @"1. Normal" : ^(){
+                                      NormalWaveViewController *vc = [[NormalWaveViewController alloc] init];
+                                      [self.navigationController pushViewController:vc animated:YES];
+                                  },
+                                  @"2. Multi lines" : ^(){ NSLog(@"Multi, tapped."); },
+                                  @"3. Long single line" : ^(){ NSLog(@"Long, tapped."); },
+                                  @"4. Very long text" : ^(){ NSLog(@"Very, tapped."); },
+                                  @"5. No message" : ^(){ NSLog(@"No, tapped."); }
+                                  },
+                          @"Day two" : @{
+                                  @"1. Normal" : ^(){ NSLog(@"Normal, tapped."); },
+                                  @"2. Multi lines" : ^(){ NSLog(@"Multi, tapped."); },
+                                  @"3. Long single line" : ^(){ NSLog(@"Long, tapped."); },
+                                  @"4. Very long text" : ^(){ NSLog(@"Very, tapped."); },
+                                  @"5. No message" : ^(){ NSLog(@"No, tapped."); }
+                                  }
+                          };
 }
 
 - (void)didReceiveMemoryWarning {
