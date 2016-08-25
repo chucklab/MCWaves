@@ -24,7 +24,19 @@
     // Do any additional setup after loading the view.
     
     self.view.backgroundColor = [UIColor whiteColor];
-    self.title = @"NormalWave";
+    switch (self.sinusoidType) {
+        case MCSinusoidTypeNone: {
+            self.title = @"TypeNone";
+        } break;
+            
+        case MCSinusoidTypeNormal: {
+            self.title = @"TypeNormal";
+        } break;
+            
+        case MCSinusoidTypeDecay: {
+            self.title = @"TypeDecay";
+        } break;
+    }
     
     // Header view
     UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, MainScreenWidth, 150)];

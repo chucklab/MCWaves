@@ -26,7 +26,7 @@
     
     self.sinusoidType = MCSinusoidTypeNormal;
     
-    self.waveSpeed = 420.0;
+    self.waveSpeed = 820.0;
     self.angularSpeed = 1.5;
     
     self.ω = self.angularSpeed;
