@@ -16,6 +16,7 @@
 		4C353B701D6C309500B9A29E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C353B6E1D6C309500B9A29E /* LaunchScreen.storyboard */; };
 		4C8C6CDD1D6EC8110002E089 /* MCSinusoid.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8C6CDC1D6EC8110002E089 /* MCSinusoid.m */; };
 		4CCFDDB41D6C30F3006AC2A3 /* MCWaveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCFDDB31D6C30F3006AC2A3 /* MCWaveView.m */; };
+		4CF2F1281D6EF6F500103616 /* MCEasing.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF2F1271D6EF6F500103616 /* MCEasing.m */; };
 		8395BE4E41CF14DE37BF9EDD /* libPods-MCWavesExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D1AEED6AE4F8AC24F9C2269 /* libPods-MCWavesExample.a */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +37,8 @@
 		4C8C6CDC1D6EC8110002E089 /* MCSinusoid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCSinusoid.m; sourceTree = "<group>"; };
 		4CCFDDB21D6C30F3006AC2A3 /* MCWaveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCWaveView.h; sourceTree = "<group>"; };
 		4CCFDDB31D6C30F3006AC2A3 /* MCWaveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCWaveView.m; sourceTree = "<group>"; };
+		4CF2F1261D6EF6F500103616 /* MCEasing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCEasing.h; sourceTree = "<group>"; };
+		4CF2F1271D6EF6F500103616 /* MCEasing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCEasing.m; sourceTree = "<group>"; };
 		5B9333C3B07CCB41A014D392 /* Pods-MCWavesExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MCWavesExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MCWavesExample/Pods-MCWavesExample.debug.xcconfig"; sourceTree = "<group>"; };
 		5D1AEED6AE4F8AC24F9C2269 /* libPods-MCWavesExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MCWavesExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFFFD1CE26310EA3E461CE9A /* Pods-MCWavesExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MCWavesExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-MCWavesExample/Pods-MCWavesExample.release.xcconfig"; sourceTree = "<group>"; };
@@ -114,6 +117,8 @@
 				4CCFDDB31D6C30F3006AC2A3 /* MCWaveView.m */,
 				4C8C6CDB1D6EC8110002E089 /* MCSinusoid.h */,
 				4C8C6CDC1D6EC8110002E089 /* MCSinusoid.m */,
+				4CF2F1261D6EF6F500103616 /* MCEasing.h */,
+				4CF2F1271D6EF6F500103616 /* MCEasing.m */,
 			);
 			name = Classes;
 			path = ../Classes;
@@ -251,6 +256,7 @@
 			files = (
 				4C353B681D6C309500B9A29E /* ViewController.m in Sources */,
 				4C8C6CDD1D6EC8110002E089 /* MCSinusoid.m in Sources */,
+				4CF2F1281D6EF6F500103616 /* MCEasing.m in Sources */,
 				4C0ADF901D6D4312005A0669 /* WaveViewController.m in Sources */,
 				4CCFDDB41D6C30F3006AC2A3 /* MCWaveView.m in Sources */,
 				4C353B651D6C309500B9A29E /* AppDelegate.m in Sources */,

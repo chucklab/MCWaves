@@ -7,6 +7,7 @@
 //
 
 #import "MCSinusoid.h"
+#import "MCEasing.h"
 
 @interface MCSinusoid ()
 
@@ -93,9 +94,7 @@
             self.φ = -self.waveSpeed * elapsedTime;
             
             // decay
-            CGFloat decay = 10.0;
-            self.decayedA = self.A - decay * elapsedTime;
-            self.decayedA = self.decayedA > 0 ? self.decayedA : 0;
+            self.decayedA = [MCEasing easingFromValue:self.A toValue:0 totalTime:10 currTime:elapsedTime function:QuinticEaseOut];
         } break;
     }
 }

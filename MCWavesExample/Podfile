@@ -5,4 +5,5 @@ target :'MCWavesExample' do
     pod 'Masonry', '~> 1.0'
     pod 'MCConstants', '~> 0.0.2'
     pod 'MCCommonTableView', '~> 0.0.1'
+    pod 'AHEasing', '~> 1.2'
 end
