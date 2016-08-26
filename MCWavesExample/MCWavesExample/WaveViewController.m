@@ -36,6 +36,10 @@
         case MCSinusoidTypeDecay: {
             self.title = @"TypeDecay";
         } break;
+            
+        case MCSinusoidTypeDecayTwo: {
+            self.title = @"TypeDecayTwo";
+        } break;
     }
     
     // Header view

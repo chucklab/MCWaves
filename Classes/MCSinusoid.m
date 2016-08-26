@@ -12,6 +12,8 @@
 @interface MCSinusoid ()
 
 @property (nonatomic) CGFloat decayedA;
+@property (nonatomic) CGFloat increasedAngularVelocity;
+@property (nonatomic) CGFloat increasedWaveSpeed;
 
 @property (nonatomic) CFTimeInterval startTimestamp;
 
@@ -28,20 +30,13 @@
     self.sinusoidType = MCSinusoidTypeNormal;
     
     self.waveSpeed = 820.0;
-    self.angularSpeed = 1.5;
-    
-    self.ω = self.angularSpeed;
+    self.ω = 1.5;
     
     return self;
 }
 
 - (void)reset {
     self.startTimestamp = 0.0;
-}
-
-- (void)setAngularSpeed:(CGFloat)angularSpeed {
-    _angularSpeed = angularSpeed;
-    _ω = angularSpeed;
 }
 
 - (void)setX:(CGFloat)x {
@@ -52,6 +47,7 @@
     CGFloat φ = self.φ;
     CGFloat k = self.k;
     
+    // Sinusoid: y=Asin(ωx+φ)+k
     switch (self.sinusoidType) {
         case MCSinusoidTypeNone: {
             _y = A * sin(.01 * (ω * x + φ)) + k;
@@ -63,6 +59,10 @@
             
         case MCSinusoidTypeDecay: {
             _y = _decayedA * sin(.01 * (ω * x + φ)) + k;
+        } break;
+            
+        case MCSinusoidTypeDecayTwo: {
+            _y = _decayedA * sin(.01 * (_increasedAngularVelocity * x + φ)) + k;
         } break;
     }
 }
@@ -93,8 +93,22 @@
             // x offset
             self.φ = -self.waveSpeed * elapsedTime;
             
-            // decay
+            // amplitude decay
             self.decayedA = [MCEasing easingFromValue:self.A toValue:0 totalTime:10 currTime:elapsedTime function:QuinticEaseOut];
+        } break;
+            
+        case MCSinusoidTypeDecayTwo: {
+            // amplitude decay
+            self.decayedA = [MCEasing easingFromValue:self.A toValue:0 totalTime:10 currTime:elapsedTime function:QuinticEaseOut];
+            
+            // angular velocity increase
+            self.increasedAngularVelocity = [MCEasing easingFromValue:self.ω toValue:self.ω * 10 totalTime:10 currTime:elapsedTime function:CubicEaseIn];
+            
+            // wave speed increase
+            self.increasedWaveSpeed = [MCEasing easingFromValue:self.waveSpeed toValue:self.waveSpeed * 5 totalTime:10 currTime:elapsedTime function:CubicEaseIn];
+            
+            // x offset
+            self.φ = -self.increasedWaveSpeed * elapsedTime;
         } break;
     }
 }

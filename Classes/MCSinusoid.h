@@ -12,6 +12,7 @@ typedef enum MCSinusoidType {
     MCSinusoidTypeNone,
     MCSinusoidTypeNormal,
     MCSinusoidTypeDecay,
+    MCSinusoidTypeDecayTwo,
 } MCSinusoidType;
 
 @interface MCSinusoid : NSObject
@@ -19,14 +20,21 @@ typedef enum MCSinusoidType {
 @property (nonatomic) MCSinusoidType sinusoidType;
 
 @property (nonatomic) CGFloat waveSpeed;
-@property (nonatomic) CGFloat angularSpeed;
 
 // Sinusoid: y=Asin(ωx+φ)+k
 @property (nonatomic) CGFloat y;
 @property (nonatomic) CGFloat x;
+
+// amplitude
 @property (nonatomic) CGFloat A;
+
+// angular velocity
 @property (nonatomic) CGFloat ω;
+
+// initial phase
 @property (nonatomic) CGFloat φ;
+
+// setover
 @property (nonatomic) CGFloat k;
 
 @property (nonatomic) CFTimeInterval currTimestamp;

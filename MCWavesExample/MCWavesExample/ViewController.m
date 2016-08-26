@@ -45,8 +45,11 @@
                                       vc.sinusoidType = MCSinusoidTypeDecay;
                                       [self.navigationController pushViewController:vc animated:YES];
                                   },
-                                  @"4. Very long text" : ^(){ NSLog(@"Very, tapped."); },
-                                  @"5. No message" : ^(){ NSLog(@"No, tapped."); }
+                                  @"4. Decay Two" : ^(){
+                                      WaveViewController *vc = [[WaveViewController alloc] init];
+                                      vc.sinusoidType = MCSinusoidTypeDecayTwo;
+                                      [self.navigationController pushViewController:vc animated:YES];
+                                  },
                                   },
                           @"Day two" : @{
                                   @"1. Normal" : ^(){ NSLog(@"Normal, tapped."); },

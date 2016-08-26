@@ -16,6 +16,10 @@
                   currTime:(CFTimeInterval)currTime
                   function:(AHEasingFunction)function
 {
+    if (currTime > totalTime) {
+        return toValue;
+    }
+    
     CGFloat t = currTime / totalTime;
     CGFloat value = fromValue + function(t) * (toValue - fromValue);
     return value;
