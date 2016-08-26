@@ -11,9 +11,6 @@
 
 @interface MCWaveView : UIView
 
-// amplitude
-@property (nonatomic) CGFloat amplitude;
-
 @property (nonatomic, strong) UIColor *waveColor;
 @property (nonatomic) NSTimeInterval waveTime;
 @property (nonatomic) MCSinusoidType sinusoidType;

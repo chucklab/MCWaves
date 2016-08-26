@@ -55,7 +55,7 @@
     headerView.backgroundColor = UIColorFromRGB(0x61c3d4);
     
     // Wave view
-    MCWaveView *waveView = [[MCWaveView alloc] initWithFrame:CGRectMake(0, -20, MainScreenWidth, 20)];
+    MCWaveView *waveView = [[MCWaveView alloc] initWithFrame:CGRectMake(0, 0, MainScreenWidth, 0)];
     self.waveView = waveView;
     [scrollView addSubview:waveView];
     waveView.backgroundColor = [UIColor whiteColor];
@@ -77,9 +77,11 @@
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     NSLog(@"%f", scrollView.contentOffset.y);
-    CGFloat amplitude = fabs(scrollView.contentOffset.y) * .2;
-    const CGFloat MaxAmplitude = 20;
-    self.waveView.amplitude = amplitude < MaxAmplitude ? amplitude : MaxAmplitude;
+    CGFloat amplitude = fabs(scrollView.contentOffset.y) * .6;
+    const CGFloat MaxAmplitude = 40;
+    //self.waveView.amplitude = amplitude < MaxAmplitude ? amplitude : MaxAmplitude;
+    CGFloat newAmplitude = amplitude < MaxAmplitude ? amplitude : MaxAmplitude;
+    self.waveView.frame = CGRectMake(0, -newAmplitude, MainScreenWidth, newAmplitude);
 }
 
 

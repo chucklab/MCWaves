@@ -51,11 +51,6 @@
 }
 
 #pragma mark - Getters && Setters
-- (void)setAmplitude:(CGFloat)amplitude {
-    _amplitude = amplitude;
-    self.sinusoid.A = amplitude;
-}
-
 - (CAShapeLayer *)waveShapeLayer {
     if (_waveShapeLayer) {
         return _waveShapeLayer;
@@ -95,6 +90,9 @@
     [self.statusLabel mas_remakeConstraints:^(MASConstraintMaker *make){
         make.edges.equalTo(self);
     }];
+    
+    self.sinusoid.A = self.bounds.size.height / 2.0;
+    self.sinusoid.k = self.sinusoid.A;
 }
 
 #pragma mark - Wave life cycle.
@@ -109,7 +107,6 @@
     [self.waveDisplayLink addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSRunLoopCommonModes];
     
     self.sinusoid.sinusoidType = self.sinusoidType;
-    self.sinusoid.A = self.amplitude;
     [self.sinusoid reset];
     
     if (self.waveTime > 0.0) {

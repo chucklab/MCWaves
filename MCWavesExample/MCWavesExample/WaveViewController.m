@@ -51,7 +51,6 @@
     MCWaveView *waveView = [[MCWaveView alloc] initWithFrame:CGRectMake(0, 150 - 40, MainScreenWidth, 40)];
     self.waveView = waveView;
     [self.view addSubview:waveView];
-    waveView.amplitude = 20;
     waveView.printStatus = NO;
     waveView.sinusoidType = self.sinusoidType;
     [waveView startWave];
