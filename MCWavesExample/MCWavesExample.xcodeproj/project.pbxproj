@@ -14,6 +14,7 @@
 		4C353B6B1D6C309500B9A29E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C353B691D6C309500B9A29E /* Main.storyboard */; };
 		4C353B6D1D6C309500B9A29E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C353B6C1D6C309500B9A29E /* Assets.xcassets */; };
 		4C353B701D6C309500B9A29E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C353B6E1D6C309500B9A29E /* LaunchScreen.storyboard */; };
+		4C4454251D70026300721FB8 /* ScrollWaveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4454241D70026300721FB8 /* ScrollWaveViewController.m */; };
 		4C8C6CDD1D6EC8110002E089 /* MCSinusoid.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8C6CDC1D6EC8110002E089 /* MCSinusoid.m */; };
 		4CCFDDB41D6C30F3006AC2A3 /* MCWaveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCFDDB31D6C30F3006AC2A3 /* MCWaveView.m */; };
 		4CF2F1281D6EF6F500103616 /* MCEasing.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF2F1271D6EF6F500103616 /* MCEasing.m */; };
@@ -33,6 +34,8 @@
 		4C353B6C1D6C309500B9A29E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4C353B6F1D6C309500B9A29E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4C353B711D6C309500B9A29E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C4454231D70026300721FB8 /* ScrollWaveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollWaveViewController.h; sourceTree = "<group>"; };
+		4C4454241D70026300721FB8 /* ScrollWaveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollWaveViewController.m; sourceTree = "<group>"; };
 		4C8C6CDB1D6EC8110002E089 /* MCSinusoid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCSinusoid.h; sourceTree = "<group>"; };
 		4C8C6CDC1D6EC8110002E089 /* MCSinusoid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCSinusoid.m; sourceTree = "<group>"; };
 		4CCFDDB21D6C30F3006AC2A3 /* MCWaveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCWaveView.h; sourceTree = "<group>"; };
@@ -93,6 +96,8 @@
 				4C353B671D6C309500B9A29E /* ViewController.m */,
 				4C0ADF8E1D6D4312005A0669 /* WaveViewController.h */,
 				4C0ADF8F1D6D4312005A0669 /* WaveViewController.m */,
+				4C4454231D70026300721FB8 /* ScrollWaveViewController.h */,
+				4C4454241D70026300721FB8 /* ScrollWaveViewController.m */,
 				4C353B691D6C309500B9A29E /* Main.storyboard */,
 				4C353B6C1D6C309500B9A29E /* Assets.xcassets */,
 				4C353B6E1D6C309500B9A29E /* LaunchScreen.storyboard */,
@@ -260,6 +265,7 @@
 				4C0ADF901D6D4312005A0669 /* WaveViewController.m in Sources */,
 				4CCFDDB41D6C30F3006AC2A3 /* MCWaveView.m in Sources */,
 				4C353B651D6C309500B9A29E /* AppDelegate.m in Sources */,
+				4C4454251D70026300721FB8 /* ScrollWaveViewController.m in Sources */,
 				4C353B621D6C309500B9A29E /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

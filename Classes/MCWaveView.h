@@ -11,11 +11,14 @@
 
 @interface MCWaveView : UIView
 
+// amplitude
+@property (nonatomic) CGFloat amplitude;
+
 @property (nonatomic, strong) UIColor *waveColor;
-@property (nonatomic, assign) NSTimeInterval waveTime;
+@property (nonatomic) NSTimeInterval waveTime;
 @property (nonatomic) MCSinusoidType sinusoidType;
 
-@property (nonatomic, assign) BOOL printStatus;
+@property (nonatomic) BOOL printStatus;
 
 #pragma mark - Wave life cycle.
 - (BOOL)startWave;
